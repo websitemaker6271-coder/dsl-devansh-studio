@@ -1,0 +1,1797 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devansh Studio — Every Moment, A Masterpiece</title>
+  <meta name="description"
+    content="Devansh Studio — luxury wedding films, ring ceremony films, invitations and albums.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --gold: #d6b781;
+      --cream: #f6eddf;
+      --bg: #060a0c
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button {
+      font: inherit
+    }
+
+    #space {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1
+    }
+
+    .shade {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 60% 45%, transparent 12%, #030608ab 85%);
+      z-index: -1
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px clamp(22px, 6vw, 105px);
+      background: linear-gradient(#05090bbf, transparent)
+    }
+
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      letter-spacing: .22em;
+      line-height: .8
+    }
+
+    .brand small {
+      display: block;
+      font-family: 'DM Sans';
+      font-size: 8px;
+      letter-spacing: .55em;
+      text-align: center;
+      margin-top: 12px
+    }
+
+    .nav {
+      display: flex;
+      gap: 36px;
+      align-items: center
+    }
+
+    .nav a,
+    .eyebrow,
+    .outline,
+    .scroll-note,
+    .counter {
+      font-size: 10px;
+      letter-spacing: .24em;
+      text-transform: uppercase
+    }
+
+    .nav a:hover {
+      color: var(--gold)
+    }
+
+    .outline {
+      border: 1px solid #c6a46d8c;
+      border-radius: 40px;
+      padding: 13px 23px;
+      transition: .3s
+    }
+
+    .outline:hover {
+      background: var(--gold);
+      color: #12100b
+    }
+
+    .hero {
+      height: 100svh;
+      min-height: 650px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0 clamp(22px, 10vw, 170px)
+    }
+
+    .hero-content {
+      max-width: 700px;
+      z-index: 3
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: .4em
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(70px, 9vw, 150px);
+      line-height: .82;
+      font-weight: 300;
+      letter-spacing: -.045em;
+      margin: 30px 0
+    }
+
+    .hero h1 em {
+      font-weight: 300
+    }
+
+    .hero p {
+      font-size: 12px;
+      line-height: 2;
+      color: #c6bdb0;
+      letter-spacing: .09em;
+      max-width: 350px
+    }
+
+    .watch {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 35px;
+      font-size: 10px;
+      letter-spacing: .25em;
+      text-transform: uppercase
+    }
+
+    .play {
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--gold);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      color: var(--gold);
+      font-size: 15px
+    }
+
+    .orb {
+      position: absolute;
+      right: 11%;
+      top: 21%;
+      width: min(40vw, 560px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid #e4ba7b8c;
+      box-shadow: inset 25px -20px 60px #bb824a24, 0 0 80px #a0774825;
+      transform: rotate(-26deg);
+      animation: float 8s ease-in-out infinite;
+      pointer-events: none
+    }
+
+    .orb:before,
+    .orb:after {
+      content: '';
+      position: absolute;
+      inset: 11%;
+      border: 1px solid #d4a9778c;
+      border-radius: 50%;
+      transform: rotateX(65deg) rotate(-30deg);
+      box-shadow: 0 0 35px #bb935c40
+    }
+
+    .orb:after {
+      inset: -10%;
+      transform: rotateY(75deg) rotate(35deg);
+      border-color: #b5d4db6b
+    }
+
+    @keyframes float {
+      50% {
+        transform: translateY(-22px) rotate(-16deg)
+      }
+    }
+
+    .scroll-note {
+      position: absolute;
+      bottom: 50px;
+      right: 7%;
+      color: var(--gold);
+      writing-mode: vertical-rl
+    }
+
+    .intro {
+      min-height: 55vh;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      padding: 100px 24px
+    }
+
+    .intro h2 {
+      font: 300 clamp(40px, 5vw, 80px)/1.05 'Cormorant Garamond', serif;
+      max-width: 900px;
+      margin: 20px auto
+    }
+
+    .intro h2 em {
+      color: var(--gold)
+    }
+
+    .intro p {
+      color: #a8a49d;
+      font-size: 13px;
+      line-height: 2
+    }
+
+    .showcase {
+      position: relative;
+      height: 600vh
+    }
+
+    .sticky {
+      position: sticky;
+      top: 0;
+      height: 100svh;
+      min-height: 620px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1400px
+    }
+
+    .section-head {
+      position: absolute;
+      top: 14%;
+      left: 8%;
+      z-index: 12
+    }
+
+    .section-head h2 {
+      font: 300 clamp(38px, 5vw, 72px)/.9 'Cormorant Garamond', serif;
+      margin: 12px 0
+    }
+
+    .scene {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d
+    }
+
+    .panel {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: min(74vw, 1050px);
+      height: min(57vh, 560px);
+      min-height: 350px;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      border: 1px solid #c6a46d55;
+      background: linear-gradient(125deg, #14191bdc, #090d10f5);
+      box-shadow: 0 40px 100px #000b;
+      overflow: hidden;
+      will-change: transform, opacity;
+      transform-origin: center
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(130deg, #58412c, #100e0d)
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.7) sepia(.12);
+      transition: transform .7s
+    }
+
+    .panel:hover img {
+      transform: scale(1.055)
+    }
+
+    .photo:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 60%, #12191b70)
+    }
+
+    .panel-copy {
+      padding: clamp(28px, 5vw, 70px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .counter {
+      color: var(--gold)
+    }
+
+    .panel h3 {
+      font: 300 clamp(42px, 5vw, 83px)/.91 'Cormorant Garamond', serif;
+      margin: 20px 0
+    }
+
+    .panel p {
+      font-size: 12px;
+      color: #b7b4af;
+      line-height: 2;
+      max-width: 270px
+    }
+
+    .explore {
+      margin-top: 30px;
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: .23em;
+      text-transform: uppercase
+    }
+
+    .progress {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+      gap: 18px
+    }
+
+    .progress i {
+      display: block;
+      width: 2px;
+      height: 28px;
+      background: #776b5b
+    }
+
+    .progress i.active {
+      background: var(--gold);
+      box-shadow: 0 0 14px var(--gold)
+    }
+
+    .gold-ring {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: min(85vw, 1250px);
+      height: 260px;
+      border: 1px dotted #c49a5d5c;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) rotateX(67deg);
+      box-shadow: 0 0 35px #c49a5d16;
+      pointer-events: none
+    }
+
+    .footer {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px;
+      background: linear-gradient(transparent, #050708)
+    }
+
+    .footer h2 {
+      font: 300 clamp(64px, 10vw, 150px)/.8 'Cormorant Garamond', serif;
+      margin: 30px 0
+    }
+
+    .footer h2 em {
+      color: var(--gold)
+    }
+
+    .footer p {
+      color: #aaa49b;
+      font-size: 12px;
+      line-height: 2
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      margin-top: 60px;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase
+    }
+
+    .demo {
+      position: fixed;
+      bottom: 15px;
+      left: 15px;
+      color: #cabfae7d;
+      font-size: 9px;
+      letter-spacing: .1em;
+      z-index: 30
+    }
+
+    .mobile-menu {
+      display: none
+    }
+
+    @media(max-width:760px) {
+      header {
+        padding: 24px
+      }
+
+      .nav {
+        display: none
+      }
+
+      .mobile-menu {
+        display: block;
+        font-size: 10px;
+        letter-spacing: .15em
+      }
+
+      .hero {
+        padding: 0 26px;
+        align-items: flex-end;
+        padding-bottom: 23vh;
+        min-height: 590px
+      }
+
+      .hero h1 {
+        font-size: clamp(66px, 17vw, 110px)
+      }
+
+      .orb {
+        width: 78vw;
+        right: -24%;
+        top: 13%;
+        opacity: .7
+      }
+
+      .section-head {
+        top: 15%;
+        left: 7%
+      }
+
+      .sticky {
+        min-height: 600px
+      }
+
+      .panel {
+        width: 86vw;
+        height: 58vh;
+        min-height: 410px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%
+      }
+
+      .panel-copy {
+        padding: 20px 26px
+      }
+
+      .panel h3 {
+        font-size: 48px;
+        margin: 9px 0
+      }
+
+      .panel p {
+        font-size: 11px;
+        line-height: 1.5
+      }
+
+      .explore {
+        margin-top: 13px
+      }
+
+      .progress {
+        right: 3%;
+        gap: 12px
+      }
+
+      .progress i {
+        height: 18px
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center
+      }
+
+      .intro {
+        min-height: 50vh
+      }
+
+      .demo {
+        font-size: 8px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      .orb {
+        animation: none
+      }
+
+      * {
+        transition: none !important
+      }
+    }
+
+    /* Luxury contact experience */
+    .contact-wrap {
+      width: min(1120px, 100%);
+      margin: 55px auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1.12fr;
+      gap: 32px;
+      text-align: left
+    }
+
+    .contact-card,
+    .enquiry-card {
+      border: 1px solid #d6b78150;
+      background: linear-gradient(140deg, #192021dc, #090d0ff0);
+      padding: clamp(25px, 4vw, 54px);
+      box-shadow: 0 24px 90px #0008
+    }
+
+    .contact-card h3,
+    .enquiry-card h3 {
+      font: 300 clamp(34px, 4vw, 54px)/1 'Cormorant Garamond', serif;
+      margin: 12px 0 25px
+    }
+
+    .contact-method {
+      display: flex;
+      gap: 17px;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #d6b78130
+    }
+
+    .contact-icon {
+      flex: 0 0 46px;
+      height: 46px;
+      border: 1px solid #d6b78180;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 18px
+    }
+
+    .contact-method strong {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase
+    }
+
+    .contact-method span {
+      display: block;
+      color: #bdb2a4;
+      font-size: 12px;
+      margin-top: 8px;
+      line-height: 1.7
+    }
+
+    .contact-method a {
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-top: 10px
+    }
+
+    .contact-method a:hover {
+      text-decoration: underline
+    }
+
+    .contact-note {
+      font-size: 11px !important;
+      color: #bdb2a4 !important;
+      margin-top: 26px
+    }
+
+    .enquiry-card label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 22px 0 10px
+    }
+
+    .enquiry-card input,
+    .enquiry-card select,
+    .enquiry-card textarea {
+      width: 100%;
+      border: 1px solid #d6b78150;
+      background: #080e10;
+      color: var(--cream);
+      font: 13px 'DM Sans', sans-serif;
+      padding: 15px 16px;
+      border-radius: 0;
+      outline: none
+    }
+
+    .enquiry-card textarea {
+      min-height: 110px;
+      resize: vertical
+    }
+
+    .enquiry-card input:focus,
+    .enquiry-card select:focus,
+    .enquiry-card textarea:focus {
+      border-color: var(--gold)
+    }
+
+    .enquiry-card button {
+      margin-top: 25px;
+      background: transparent;
+      color: var(--gold);
+      cursor: pointer;
+      width: 100%;
+      min-height: 48px
+    }
+
+    .enquiry-card button:hover {
+      background: var(--gold);
+      color: #12100b
+    }
+
+    .contact-status {
+      font-size: 12px !important;
+      line-height: 1.6;
+      color: #d6b781 !important
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 22px
+    }
+
+    .contact-actions a {
+      font-size: 10px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid #d6b78170;
+      padding-bottom: 7px
+    }
+
+    @media(max-width:760px) {
+      .contact-wrap {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 35px
+      }
+
+      .contact-card,
+      .enquiry-card {
+        padding: 26px
+      }
+
+      .footer {
+        padding: 100px 22px
+      }
+
+      .contact-actions {
+        justify-content: center
+      }
+    }
+
+    /* Keep 3D cards inside their own viewport layer, below the section title. */
+    .showcase {
+      isolation: isolate;
+      overflow: clip
+    }
+
+    .sticky {
+      isolation: isolate;
+      contain: paint
+    }
+
+    .gold-ring {
+      z-index: 0;
+      opacity: .42
+    }
+
+    .scene {
+      z-index: 2;
+      pointer-events: none;
+      overflow: hidden;
+      clip-path: inset(0)
+    }
+
+    .panel {
+      pointer-events: none;
+      backface-visibility: hidden;
+    }
+
+    .panel.is-current {
+      pointer-events: auto
+    }
+
+    .section-head {
+      z-index: 10;
+      pointer-events: none;
+      text-shadow: 0 3px 20px #030608
+    }
+
+    .progress {
+      z-index: 11
+    }
+
+    @media(max-width:760px) {
+      .section-head {
+        top: 10%
+      }
+
+      .scene {
+        clip-path: inset(0)
+      }
+    }
+
+    /* Fix: heading is in normal document flow, never layered over moving cards. */
+    .showcase {
+      height: calc(600vh + 210px)
+    }
+
+    .showcase-heading {
+      height: 210px;
+      box-sizing: border-box;
+      padding: 45px clamp(25px, 8vw, 130px) 22px;
+      position: relative;
+      z-index: 3;
+      background: linear-gradient(180deg, #080d0f, #0b1112)
+    }
+
+    .showcase-heading h2 {
+      font: 300 clamp(48px, 6vw, 88px)/1 'Cormorant Garamond', serif;
+      margin: 13px 0 8px;
+      color: var(--cream)
+    }
+
+    .showcase-heading p {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase
+    }
+
+    .sticky {
+      isolation: isolate
+    }
+
+    @media(max-width:760px) {
+      .showcase {
+        height: calc(600vh + 185px)
+      }
+
+      .showcase-heading {
+        height: 185px;
+        padding: 38px 25px 16px
+      }
+
+      .showcase-heading h2 {
+        font-size: clamp(42px, 11vw, 65px)
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .showcase {
+        height: auto !important
+      }
+
+      .showcase-heading {
+        height: auto;
+        padding-bottom: 36px
+      }
+    }
+
+    /* Cinematic intro + featured stories, independent of existing showcase */
+    .film-intro {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: radial-gradient(circle at 50% 45%, #29221a, #050607 65%);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      transition: opacity .9s ease, visibility .9s
+    }
+
+    .film-intro.is-gone {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none
+    }
+
+    .intro-glow {
+      position: absolute;
+      width: min(65vw, 560px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid #d6b78180;
+      box-shadow: 0 0 120px #b4874240, inset 0 0 100px #ad87542b;
+      animation: introOrbit 6s ease-in-out infinite
+    }
+
+    .intro-glow:before,
+    .intro-glow:after {
+      content: '';
+      position: absolute;
+      inset: 12%;
+      border: 1px solid #d6b78175;
+      border-radius: 50%;
+      transform: rotateX(66deg) rotate(30deg)
+    }
+
+    .intro-glow:after {
+      inset: -12%;
+      transform: rotateY(75deg)
+    }
+
+    @keyframes introOrbit {
+      50% {
+        transform: rotate(30deg) scale(1.08)
+      }
+    }
+
+    .intro-core {
+      position: relative;
+      text-align: center;
+      padding: 20px;
+      animation: introReveal 1.4s ease both
+    }
+
+    @keyframes introReveal {
+      from {
+        opacity: 0;
+        transform: translateY(26px);
+        filter: blur(10px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+        filter: none
+      }
+    }
+
+    .intro-core .monogram {
+      font: 300 clamp(85px, 15vw, 180px)/1 'Cormorant Garamond', serif;
+      color: var(--gold);
+      text-shadow: 0 0 80px #d6b7817a
+    }
+
+    .intro-core .wordmark {
+      font: 300 clamp(22px, 4vw, 43px) 'Cormorant Garamond', serif;
+      letter-spacing: .4em;
+      margin: 12px 0
+    }
+
+    .intro-core .tagline {
+      font-size: 10px;
+      letter-spacing: .35em;
+      color: #d8c3a2;
+      text-transform: uppercase
+    }
+
+    .intro-skip {
+      position: absolute;
+      bottom: 7%;
+      right: 7%;
+      background: none;
+      color: var(--gold);
+      border: 1px solid #d6b78188;
+      padding: 14px 24px;
+      cursor: pointer;
+      letter-spacing: .2em;
+      font-size: 10px
+    }
+
+    .intro-replay {
+      position: absolute;
+      bottom: 45px;
+      left: 7%;
+      background: none;
+      border: 0;
+      color: #d6b781;
+      letter-spacing: .14em;
+      font-size: 10px;
+      cursor: pointer;
+      z-index: 5
+    }
+
+    .featured {
+      position: relative;
+      padding: 140px clamp(22px, 7vw, 110px);
+      background: linear-gradient(180deg, #080e10, #10100e 50%, #070a0c);
+      isolation: isolate
+    }
+
+    .featured-top {
+      max-width: 900px;
+      margin: 0 auto 65px;
+      text-align: center
+    }
+
+    .featured-top h2 {
+      font: 300 clamp(54px, 8vw, 116px)/.93 'Cormorant Garamond', serif;
+      margin: 20px 0
+    }
+
+    .featured-top h2 em {
+      color: var(--gold)
+    }
+
+    .featured-top p {
+      font-size: 13px;
+      line-height: 2;
+      color: #bbb2a6
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: clamp(22px, 4vw, 70px);
+      max-width: 1240px;
+      margin: auto
+    }
+
+    .story-card {
+      position: relative;
+      min-width: 0;
+      cursor: pointer;
+      background: #141719;
+      border: 1px solid #d6b78135;
+      text-align: left;
+      color: var(--cream);
+      padding: 0;
+      overflow: hidden;
+      transition: transform .5s, border-color .5s
+    }
+
+    .story-card:nth-child(2) {
+      margin-top: 120px
+    }
+
+    .story-card:nth-child(3) {
+      grid-column: 1 / -1;
+      max-width: 900px;
+      margin: -20px auto 0;
+      width: 100%
+    }
+
+    .story-card:hover,
+    .story-card:focus-visible {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      outline: none
+    }
+
+    .story-visual {
+      display: block;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative
+    }
+
+    .story-card:nth-child(3) .story-visual {
+      aspect-ratio: 16/7
+    }
+
+    .story-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.7) sepia(.15);
+      transition: transform 1s, filter .8s
+    }
+
+    .story-card:hover img {
+      transform: scale(1.07);
+      filter: saturate(1)
+    }
+
+    .story-visual:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 40%, #0a0a0ae8)
+    }
+
+    .story-details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: clamp(25px, 4vw, 55px)
+    }
+
+    .story-details small {
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: .23em;
+      text-transform: uppercase
+    }
+
+    .story-details h3 {
+      font: 300 clamp(34px, 4vw, 60px)/1 'Cormorant Garamond', serif;
+      margin: 12px 0
+    }
+
+    .story-details span {
+      font-size: 10px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: #e4cfae
+    }
+
+    .story-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      background: #050708ed;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: auto
+    }
+
+    .story-modal.is-open {
+      display: flex
+    }
+
+    .story-dialog {
+      position: relative;
+      max-width: 1050px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      background: #101618;
+      border: 1px solid #d6b78170;
+      box-shadow: 0 30px 100px #000
+    }
+
+    .story-dialog img {
+      width: 100%;
+      height: 100%;
+      min-height: 390px;
+      object-fit: cover
+    }
+
+    .story-dialog-copy {
+      padding: clamp(30px, 5vw, 65px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .story-dialog h3 {
+      font: 300 clamp(48px, 6vw, 82px)/.95 'Cormorant Garamond', serif;
+      margin: 20px 0
+    }
+
+    .story-dialog p {
+      color: #c1b7a7;
+      font-size: 13px;
+      line-height: 2
+    }
+
+    .story-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 2;
+      color: var(--cream);
+      border: 1px solid #d6b781;
+      background: #0a0d0d;
+      padding: 10px 15px;
+      cursor: pointer
+    }
+
+    .story-dialog .outline {
+      align-self: start;
+      margin-top: 20px;
+      color: var(--gold)
+    }
+
+    @media(max-width:760px) {
+      .featured {
+        padding: 90px 22px
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr
+      }
+
+      .story-card:nth-child(2),
+      .story-card:nth-child(3) {
+        margin: 0;
+        grid-column: auto
+      }
+
+      .story-card:nth-child(3) .story-visual {
+        aspect-ratio: 4/3
+      }
+
+      .story-dialog {
+        grid-template-columns: 1fr
+      }
+
+      .story-dialog img {
+        min-height: 0;
+        max-height: 36vh
+      }
+
+      .story-dialog-copy {
+        padding: 28px
+      }
+
+      .intro-skip {
+        bottom: 9%;
+        right: 50%;
+        transform: translateX(50%)
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      .film-intro,
+      .intro-core,
+      .intro-glow,
+      .story-card,
+      .story-visual img {
+        animation: none !important;
+        transition: none !important
+      }
+    }
+
+    /* V4: The Memory Universe and interactive Royal Album */
+    .memory-section {
+      position: relative;
+      padding: 125px 5vw 115px;
+      background: radial-gradient(ellipse at 50% 45%, #28302b 0%, #101617 42%, #070b0c 80%);
+      overflow: hidden;
+      isolation: isolate
+    }
+
+    .memory-heading {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px
+    }
+
+    .memory-heading h2,
+    .album-heading h2 {
+      font: 300 clamp(58px, 8vw, 116px)/.9 'Cormorant Garamond', serif;
+      margin: 20px 0
+    }
+
+    .memory-heading em,
+    .album-heading em {
+      color: var(--gold)
+    }
+
+    .memory-heading p,
+    .album-heading p {
+      font-size: 13px;
+      line-height: 1.9;
+      color: #c3b9ab
+    }
+
+    .memory-viewport {
+      position: relative;
+      height: min(75vh, 700px);
+      min-height: 480px;
+      perspective: 1300px;
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent)
+    }
+
+    .memory-track {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d
+    }
+
+    .memory-frame {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: min(46vw, 560px);
+      height: min(58vh, 480px);
+      max-height: 500px;
+      border: 1px solid #cda76b7c;
+      background: #101616;
+      box-shadow: 0 40px 90px #000b, 0 0 30px #d4ad6a22;
+      overflow: hidden;
+      transition: transform .85s cubic-bezier(.22, .8, .22, 1), opacity .7s, filter .7s;
+      will-change: transform, opacity;
+      transform-origin: center
+    }
+
+    .memory-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(.72) sepia(.1)
+    }
+
+    .memory-frame:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 45%, #030809cf)
+    }
+
+    .memory-frame .frame-label {
+      position: absolute;
+      bottom: 28px;
+      left: 32px;
+      z-index: 2;
+      font: 300 clamp(29px, 3vw, 45px)/1 'Cormorant Garamond', serif
+    }
+
+    .memory-frame .frame-label small {
+      display: block;
+      font: 10px 'DM Sans', sans-serif;
+      letter-spacing: .25em;
+      color: var(--gold);
+      margin-bottom: 10px
+    }
+
+    .memory-frame[data-distance="0"] {
+      z-index: 6;
+      opacity: 1;
+      filter: none;
+      transform: translate(-50%, -50%) translateZ(140px) rotateY(0)
+    }
+
+    .memory-frame[data-distance="-1"] {
+      z-index: 4;
+      opacity: .55;
+      filter: brightness(.65);
+      transform: translate(-128%, -48%) translateZ(-130px) rotateY(27deg) scale(.83)
+    }
+
+    .memory-frame[data-distance="1"] {
+      z-index: 4;
+      opacity: .55;
+      filter: brightness(.65);
+      transform: translate(28%, -48%) translateZ(-130px) rotateY(-27deg) scale(.83)
+    }
+
+    .memory-frame[data-distance="-2"],
+    .memory-frame[data-distance="2"] {
+      opacity: .13;
+      z-index: 2;
+      transform: translate(-50%, -50%) translateZ(-500px) scale(.6);
+      pointer-events: none
+    }
+
+    .memory-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      margin: 10px auto 0
+    }
+
+    .memory-controls button,
+    .album-controls button {
+      cursor: pointer;
+      color: var(--gold);
+      background: transparent;
+      border: 1px solid #cda76b75;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 20px
+    }
+
+    .memory-controls button:hover,
+    .album-controls button:hover {
+      background: #d6b781;
+      color: #111
+    }
+
+    .memory-count {
+      font-size: 11px;
+      letter-spacing: .2em;
+      color: #d6b781
+    }
+
+    .memory-hint {
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: .14em;
+      color: #a59b8c;
+      margin-top: 20px
+    }
+
+    .album-section {
+      padding: 130px 6vw 150px;
+      background: linear-gradient(#070b0c, #181713 50%, #070b0c);
+      overflow: hidden
+    }
+
+    .album-heading {
+      text-align: center;
+      max-width: 740px;
+      margin: auto auto 70px
+    }
+
+    .album-stage {
+      perspective: 1500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 490px
+    }
+
+    .album-book {
+      position: relative;
+      width: min(90vw, 850px);
+      aspect-ratio: 1.65;
+      transform: rotateX(8deg);
+      filter: drop-shadow(0 35px 38px #000a)
+    }
+
+    .album-book:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 8px solid #352a20;
+      background: #34291d;
+      box-shadow: inset 0 0 0 2px #c7a46c, 0 0 0 1px #cda76b66
+    }
+
+    .album-spread {
+      position: absolute;
+      inset: 8px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #f0e8d9;
+      overflow: hidden
+    }
+
+    .album-page {
+      position: relative;
+      overflow: hidden;
+      background: #e9dfcf;
+      color: #29241d
+    }
+
+    .album-page img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity .35s
+    }
+
+    .album-page:first-child {
+      border-right: 3px solid #b4a38a
+    }
+
+    .album-page:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      box-shadow: inset 0 0 30px #4e3a2433
+    }
+
+    .album-page .album-caption {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      right: 20px;
+      background: #1119;
+      color: #fff;
+      padding: 10px;
+      font: 300 clamp(18px, 2.6vw, 34px) 'Cormorant Garamond', serif
+    }
+
+    .album-flip {
+      position: absolute;
+      inset: 8px 8px 8px 50%;
+      background: #e9dfcf;
+      transform-origin: left;
+      backface-visibility: hidden;
+      pointer-events: none;
+      z-index: 4;
+      opacity: 0
+    }
+
+    .album-book.flipping .album-flip {
+      animation: album-turn .7s ease-in-out
+    }
+
+    @keyframes album-turn {
+      0% {
+        opacity: 1;
+        transform: rotateY(0)
+      }
+
+      65% {
+        opacity: 1
+      }
+
+      100% {
+        opacity: 0;
+        transform: rotateY(-175deg)
+      }
+    }
+
+    .album-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      margin: 36px 0 0
+    }
+
+    .album-count {
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: .2em
+    }
+
+    .album-note {
+      text-align: center;
+      font-size: 11px;
+      color: #b4aa9a;
+      margin-top: 18px
+    }
+
+    @media(max-width:760px) {
+      .memory-section {
+        padding: 85px 12px
+      }
+
+      .memory-viewport {
+        height: 470px;
+        min-height: 0
+      }
+
+      .memory-frame {
+        width: 72vw;
+        height: 350px
+      }
+
+      .memory-frame[data-distance="-1"] {
+        transform: translate(-110%, -48%) translateZ(-130px) rotateY(27deg) scale(.78)
+      }
+
+      .memory-frame[data-distance="1"] {
+        transform: translate(10%, -48%) translateZ(-130px) rotateY(-27deg) scale(.78)
+      }
+
+      .album-section {
+        padding: 90px 15px
+      }
+
+      .album-heading {
+        margin-bottom: 35px
+      }
+
+      .album-stage {
+        min-height: 270px
+      }
+
+      .album-book {
+        width: 96vw;
+        aspect-ratio: 1.35
+      }
+
+      .album-page .album-caption {
+        font-size: 18px;
+        padding: 5px;
+        bottom: 6px;
+        left: 6px
+      }
+
+      .memory-hint {
+        line-height: 1.8
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      .memory-frame,
+      .album-page img {
+        transition: none
+      }
+
+      .album-book.flipping .album-flip {
+        animation: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="film-intro" id="film-intro" role="dialog" aria-label="Devansh Studio cinematic introduction"
+    aria-modal="true">
+    <div class="intro-glow" aria-hidden="true"></div>
+    <div class="intro-core">
+      <div class="monogram">DSL</div>
+      <div class="wordmark">DEVANSH STUDIO</div>
+      <div class="tagline">The art of remembering</div>
+    </div><button class="intro-skip" id="intro-skip" type="button">ENTER EXPERIENCE ↗</button>
+  </div><canvas id="space" aria-hidden="true"></canvas>
+  <div class="shade"></div>
+  <header><a href="#home" class="brand">D<span style="color:var(--gold)">SL</span> DEVANSH<small>STUDIO</small></a>
+    <nav class="nav"><a href="#home">Home</a><a href="#work">Our work</a><a href="#stories">Stories</a><a
+        href="#memory">Gallery</a><a href="#album">Album</a><a href="#contact">About & Contact</a><a class="outline"
+        href="#contact">Enquire ↗</a></nav><a class="mobile-menu" href="#work">EXPLORE ↓</a>
+  </header>
+  <main>
+    <section class="hero" id="home"><button class="intro-replay" id="intro-replay" type="button">↻ REPLAY INTRO</button>
+      <div class="orb" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="eyebrow">Luxury wedding films & visual stories</div>
+        <h1>EVERY<br>MOMENT,<br><em>A Masterpiece.</em></h1>
+        <p>Some moments deserve to live forever. We transform your celebrations into timeless cinematic stories.</p><a
+          class="watch" href="#work"><span class="play">▶</span>Explore our creations</a>
+      </div><span class="scroll-note">SCROLL TO DISCOVER ↓</span>
+    </section>
+    <section class="intro">
+      <div class="eyebrow">THE ART OF REMEMBERING</div>
+      <h2>Not just films. <em>Feelings that last forever.</em></h2>
+      <p>A celebration of love, beautifully imagined and meticulously crafted.</p>
+    </section>
+    <section class="showcase" id="work">
+      <div class="showcase-heading"><span class="eyebrow">DEVANSH STUDIO / 01 — 06</span>
+        <h2>What we <em>create.</em></h2>
+        <p>Scroll to explore our craft ↓</p>
+      </div>
+      <div class="sticky">
+        <div class="gold-ring"></div>
+        <div class="scene" id="scene"></div>
+        <div class="progress" id="progress" aria-label="Scroll progress"></div>
+      </div>
+    </section>
+    <section class="featured" id="stories">
+      <div class="featured-top"><span class="eyebrow">SELECTED STORIES / DEMO COLLECTION</span>
+        <h2>Stories worth <em>remembering.</em></h2>
+        <p>Every celebration is a world of its own. Explore the cinematic experiences we can create.</p>
+      </div>
+      <div class="story-grid" id="story-grid"></div>
+    </section>
+    <div class="story-modal" id="story-modal" role="dialog" aria-modal="true" aria-label="Featured wedding story"
+      aria-hidden="true">
+      <div class="story-dialog"><button class="story-close" id="story-close" type="button" aria-label="Close story">✕
+          CLOSE</button><img id="story-modal-img" alt="Demo wedding story">
+        <div class="story-dialog-copy"><span class="eyebrow">FEATURED STORY · DEMO</span>
+          <h3 id="story-modal-title"></h3>
+          <p id="story-modal-desc"></p><a class="outline" href="#contact" id="story-enquire">ENQUIRE ABOUT YOUR STORY
+            ↗</a>
+        </div>
+      </div>
+    </div>
+    <section class="memory-section" id="memory">
+      <div class="memory-heading"><span class="eyebrow">AN IMMERSIVE PHOTO EXPERIENCE</span>
+        <h2>The Memory <em>Universe.</em></h2>
+        <p>A world of moments, suspended in time. Explore the demo gallery — original Devansh Studio photographs will be
+          added later.</p>
+      </div>
+      <div class="memory-viewport" id="memory-viewport" tabindex="0"
+        aria-label="Interactive wedding photo gallery. Use left and right arrow keys to browse.">
+        <div class="memory-track" id="memory-track"></div>
+      </div>
+      <div class="memory-controls"><button id="memory-prev" aria-label="Previous photograph">←</button><span
+          class="memory-count" id="memory-count" aria-live="polite">01 / 05</span><button id="memory-next"
+          aria-label="Next photograph">→</button></div>
+      <p class="memory-hint">SCROLL OVER GALLERY, SWIPE OR USE ARROWS TO EXPLORE</p>
+    </section>
+    <section class="album-section" id="album">
+      <div class="album-heading"><span class="eyebrow">THE ART OF REMEMBERING</span>
+        <h2>The Royal <em>Album.</em></h2>
+        <p>Turn each page of our interactive demo wedding album. A timeless keepsake, beautifully presented.</p>
+      </div>
+      <div class="album-stage">
+        <div class="album-book" id="album-book">
+          <div class="album-spread">
+            <div class="album-page"><img id="album-left" alt="Demo wedding album left page"><span class="album-caption"
+                id="album-left-caption"></span></div>
+            <div class="album-page"><img id="album-right" alt="Demo wedding album right page"><span
+                class="album-caption" id="album-right-caption"></span></div>
+          </div>
+          <div class="album-flip" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="album-controls"><button id="album-prev" aria-label="Previous album spread">←</button><span
+          class="album-count" id="album-count" aria-live="polite">01 / 03</span><button id="album-next"
+          aria-label="Next album spread">→</button></div>
+      <p class="album-note">DEMO ALBUM · REPLACE IMAGES WITH ORIGINAL STUDIO WORK LATER</p>
+    </section>
+    <section class="footer" id="contact">
+      <div class="eyebrow">LET'S CREATE SOMETHING TIMELESS</div>
+      <h2>Your story.<br><em>Our art.</em></h2>
+      <p>Wedding films · Ring ceremonies · Invitations · Luxury albums<br>Tell us about your celebration.</p>
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <div class="eyebrow">GET IN TOUCH</div>
+          <h3>Let's make it <em>unforgettable.</em></h3>
+          <div class="contact-method">
+            <div class="contact-icon">✉</div>
+            <div><strong>Email</strong><span>For project enquiries and collaborations</span><a id="email-link" href="#"
+                aria-disabled="true">Add studio email ↗</a></div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">☎</div>
+            <div><strong>Call / WhatsApp</strong><span>Discuss dates, films and wedding packages</span><a
+                id="phone-link" href="#" aria-disabled="true">Add studio number ↗</a>
+              <div><a id="whatsapp-link" href="#" aria-disabled="true">WhatsApp ↗</a></div>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">◎</div>
+            <div><strong>Instagram</strong><span>Explore our latest edits, reels and wedding stories</span><a
+                id="instagram-link" href="#" aria-disabled="true">Add Instagram profile ↗</a></div>
+          </div>
+          <p class="contact-note">Contact links will become active when the studio's actual details are added. No sample
+            numbers or fake accounts are used.</p>
+        </div>
+        <form class="enquiry-card" id="enquiry-form">
+          <div class="eyebrow">SEND AN ENQUIRY</div>
+          <h3>Tell us your <em>story.</em></h3>
+          <label for="client-name">Your name</label><input id="client-name" name="name" autocomplete="name"
+            placeholder="Your full name" required>
+          <label for="client-email">Email</label><input id="client-email" name="email" type="email" autocomplete="email"
+            placeholder="you@example.com" required>
+          <label for="event-type">Interested in</label><select id="event-type" name="service" required>
+            <option value="">Select a service</option>
+            <option>Wedding Films</option>
+            <option>Ring Ceremony</option>
+            <option>Wedding Invitations</option>
+            <option>Luxury Wedding Albums</option>
+            <option>Pre-Wedding Stories</option>
+            <option>Instagram Reels & Highlights</option>
+            <option>Multiple Services</option>
+          </select>
+          <label for="event-date">Event date (optional)</label><input id="event-date" name="date" type="date">
+          <label for="client-message">Your message</label><textarea id="client-message" name="message"
+            placeholder="Tell us about your celebration..." required></textarea>
+          <button class="outline" type="submit">COMPOSE EMAIL ENQUIRY ↗</button>
+          <p class="contact-status" id="contact-status" role="status" aria-live="polite">This form opens your email app
+            after the studio email is configured. It does not store or send messages itself.</p>
+        </form>
+      </div>
+      <div class="footer-links"><a href="#home">Back to top ↑</a><a href="#work">Explore services</a><a
+          href="#contact">Contact</a></div>
+    </section>
+  </main>
+  <div class="demo">DESIGN PROTOTYPE · DEMO MEDIA · REPLACE BEFORE PUBLISHING</div>
+  <script>
+    const services = [{ title: 'Cinematic\nWedding Films', desc: 'A cinematic retelling of your most unforgettable day.', img: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80' }, { title: 'Ring\nCeremony', desc: 'The beginning of forever, captured in every delicate detail.', img: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&q=80' }, { title: 'Wedding\nInvitations', desc: 'An extraordinary first impression for an extraordinary celebration.', img: 'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=1200&q=80' }, { title: 'Luxury\nWedding Albums', desc: 'Beautifully bound memories designed to be treasured for generations.', img: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1200&q=80' }, { title: 'Pre-Wedding\nStories', desc: 'An intimate, cinematic chapter before the big day.', img: 'https://images.unsplash.com/photo-1529636798458-92182e662485?w=1200&q=80' }, { title: 'Instagram\nHighlights', desc: 'Short-form wedding edits and unforgettable social moments.', img: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=1200&q=80' }]; const scene = document.querySelector('#scene'), progress = document.querySelector('#progress'); services.forEach((s, i) => { let p = document.createElement('article'); p.className = 'panel'; p.innerHTML = `<div class="photo"><img loading="lazy" src="${s.img}" alt="Demo imagery for ${s.title.replace('\n', ' ')}"></div><div class="panel-copy"><span class="counter">0${i + 1} / 06 — OUR CRAFT</span><h3>${s.title.replace('\n', '<br>')}</h3><p>${s.desc}</p><a class="explore" href="#contact">DISCOVER MORE ↗</a></div>`; scene.append(p); let dot = document.createElement('i'); progress.append(dot) }); const panels = [...document.querySelectorAll('.panel')], dots = [...progress.children], showcase = document.querySelector('.showcase'); let target = 0, smoothed = 0; function update() { const r = showcase.getBoundingClientRect(), range = showcase.offsetHeight - innerHeight; target = Math.max(0, Math.min(1, -r.top / Math.max(1, range))) * (services.length - 1); smoothed += (target - smoothed) * .095; panels.forEach((p, i) => { let d = i - smoothed, ad = Math.abs(d); p.style.transform = `translate(-50%,-50%) translate3d(0,${d * 83}vh,${-ad * 360}px) rotateX(${d * 10}deg) scale(${Math.max(.70, 1 - ad * .12)})`; p.style.opacity = ad < .62 ? Math.max(0, 1 - ad * 1.65) : 0; p.style.visibility = ad < .62 ? 'visible' : 'hidden'; p.style.zIndex = String(100 - Math.round(ad * 10)); p.classList.toggle('is-current', ad < .35) }); dots.forEach((d, i) => d.classList.toggle('active', i === Math.round(smoothed))); requestAnimationFrame(update) } if (matchMedia('(prefers-reduced-motion:reduce)').matches) { document.querySelector('.showcase').style.height = 'auto'; document.querySelector('.sticky').style.cssText = 'position:relative;height:auto;min-height:0;display:block;padding:180px 0 80px'; scene.style.cssText = 'position:relative;display:grid;gap:28px'; panels.forEach(p => p.style.cssText = 'position:relative;left:auto;top:auto;transform:none;width:86vw;margin:auto;opacity:1;visibility:visible;pointer-events:auto'); progress.style.display = 'none' } else update();
+    const canvas = document.getElementById('space'), ctx = canvas.getContext('2d'); let stars = [], w, h, mouse = { x: 0, y: 0 }; function resize() { w = canvas.width = innerWidth * devicePixelRatio; h = canvas.height = innerHeight * devicePixelRatio; stars = Array.from({ length: Math.min(140, Math.floor(innerWidth / 8)) }, () => ({ x: Math.random() * w, y: Math.random() * h, r: (Math.random() * 1.5 + .25) * devicePixelRatio, v: Math.random() * .4 + .1, a: Math.random() * .65 + .15 })) } resize(); addEventListener('resize', resize); addEventListener('pointermove', e => { mouse.x = e.clientX / innerWidth - .5; mouse.y = e.clientY / innerHeight - .5 }); let tick = 0; function draw() { tick++; ctx.clearRect(0, 0, w, h); let g = ctx.createRadialGradient(w * .7, h * .45, 0, w * .65, h * .45, w * .65); g.addColorStop(0, '#172a2a'); g.addColorStop(.5, '#0a1115'); g.addColorStop(1, '#040709'); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); stars.forEach((s, i) => { let x = (s.x + mouse.x * (i % 5) * 6 * devicePixelRatio + w) % w, y = (s.y + Math.sin(tick * .005 + i) * 4 * devicePixelRatio + h) % h; ctx.fillStyle = i % 4 === 0 ? `rgba(218,175,111,${s.a})` : `rgba(187,207,209,${s.a})`; ctx.beginPath(); ctx.arc(x, y, s.r, 0, Math.PI * 2); ctx.fill() }); requestAnimationFrame(draw) } if (!matchMedia('(prefers-reduced-motion:reduce)').matches) draw(); else { ctx.fillStyle = '#091014'; ctx.fillRect(0, 0, w, h) }
+
+    // Replace these empty values with the studio's REAL details when ready.
+    const STUDIO_CONTACT = {
+      email: '',
+      phone: '', // country code + digits, e.g. 91XXXXXXXXXX
+      instagram: '' // complete https://instagram.com/... URL
+    };
+    function activateContactLink(id, url, label) {
+      const a = document.getElementById(id);
+      if (!url) { a.addEventListener('click', e => e.preventDefault()); return; }
+      a.href = url; a.textContent = label;
+      a.removeAttribute('aria-disabled');
+      if (url.startsWith('https://')) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+    }
+    activateContactLink('email-link', STUDIO_CONTACT.email ? 'mailto:' + STUDIO_CONTACT.email : '', 'Send email ↗');
+    activateContactLink('phone-link', STUDIO_CONTACT.phone ? 'tel:+' + STUDIO_CONTACT.phone.replace(/\D/g, '') : '', 'Call now ↗');
+    activateContactLink('whatsapp-link', STUDIO_CONTACT.phone ? 'https://wa.me/' + STUDIO_CONTACT.phone.replace(/\D/g, '') : '', 'Chat on WhatsApp ↗');
+    activateContactLink('instagram-link', /^https:\/\/((www\.)?instagram\.com)\//.test(STUDIO_CONTACT.instagram) ? STUDIO_CONTACT.instagram : '', 'View Instagram ↗');
+    document.getElementById('enquiry-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const status = document.getElementById('contact-status');
+      if (!STUDIO_CONTACT.email) { status.textContent = 'Studio email is not configured yet. Add it to STUDIO_CONTACT in index.html to activate enquiries.'; return; }
+      const form = new FormData(e.currentTarget);
+      const subject = 'Devansh Studio Enquiry — ' + form.get('service');
+      const body = `Name: ${form.get('name')}\nEmail: ${form.get('email')}\nService: ${form.get('service')}\nEvent date: ${form.get('date') || 'Not specified'}\n\nMessage:\n${form.get('message')}`;
+      location.href = 'mailto:' + encodeURIComponent(STUDIO_CONTACT.email) + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      status.textContent = 'Your email app should open with the enquiry. Please press Send there to deliver it.';
+    });
+
+    // The intro is a lightweight, original CSS animation; it never auto-plays audio.
+    const introOverlay = document.getElementById('film-intro');
+    const introSkip = document.getElementById('intro-skip');
+    let introTimeout;
+    function dismissIntro() { clearTimeout(introTimeout); introOverlay.classList.add('is-gone'); introOverlay.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+    function playIntro() { clearTimeout(introTimeout); introOverlay.classList.remove('is-gone'); introOverlay.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; introSkip.focus({ preventScroll: true }); introTimeout = setTimeout(dismissIntro, 3500); }
+    introSkip.addEventListener('click', dismissIntro);
+    document.getElementById('intro-replay').addEventListener('click', playIntro);
+    introOverlay.addEventListener('keydown', e => { if (e.key === 'Escape') dismissIntro(); });
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { introOverlay.classList.add('is-gone'); introOverlay.setAttribute('aria-hidden', 'true'); } else { playIntro(); }
+    // Featured stories are original presentation templates; real portfolio media comes later.
+    const featuredStories = [
+      { title: 'A Royal Beginning', type: 'WEDDING FILM', desc: 'An atmospheric wedding-film presentation featuring cinematic storytelling, timeless details and emotional highlights. Replace this demo with a real Devansh Studio film when ready.', img: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&q=85' },
+      { title: 'The Promise', type: 'RING CEREMONY', desc: 'An intimate engagement-film presentation with beautiful close-ups, warm lighting and a focus on every meaningful gesture.', img: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1400&q=85' },
+      { title: 'Forever in Frames', type: 'WEDDING ALBUM', desc: 'An editorial album-story presentation for showcasing the studio’s finest wedding photography and beautifully designed albums.', img: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1400&q=85' }
+    ];
+    const storyGrid = document.getElementById('story-grid'), storyModal = document.getElementById('story-modal');
+    let storyOpener = null;
+    featuredStories.forEach((story, i) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'story-card'; b.setAttribute('aria-label', 'Explore ' + story.title); b.innerHTML = `<span class="story-visual"><img loading="lazy" src="${story.img}" alt="Demo imagery for ${story.title}"></span><span class="story-details"><small>0${i + 1} / ${story.type}</small><h3>${story.title}</h3><span>EXPLORE STORY ↗</span></span>`; b.addEventListener('click', () => { storyOpener = b; document.getElementById('story-modal-img').src = story.img; document.getElementById('story-modal-title').textContent = story.title; document.getElementById('story-modal-desc').textContent = story.desc; storyModal.classList.add('is-open'); storyModal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; document.getElementById('story-close').focus(); }); storyGrid.append(b); });
+    function closeStory() { storyModal.classList.remove('is-open'); storyModal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; if (storyOpener) storyOpener.focus(); }
+    document.getElementById('story-close').addEventListener('click', closeStory);
+    document.getElementById('story-enquire').addEventListener('click', closeStory);
+    storyModal.addEventListener('click', e => { if (e.target === storyModal) closeStory(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && storyModal.classList.contains('is-open')) closeStory(); });
+
+    // V4 immersive gallery: lightweight CSS 3D, touch and wheel navigation.
+    const memoryItems = [
+      { title: 'A Timeless Promise', tag: 'WEDDING STORY', img: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=82' },
+      { title: 'Golden Hours', tag: 'CELEBRATION', img: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&q=82' },
+      { title: 'Forever Begins', tag: 'THE CEREMONY', img: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1200&q=82' },
+      { title: 'The Little Details', tag: 'MEMORIES', img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=82' },
+      { title: 'Together Always', tag: 'THE STORY', img: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=1200&q=82' }
+    ];
+    let memoryIndex = 0; const memoryTrack = document.getElementById('memory-track');
+    memoryItems.forEach((item, i) => { const f = document.createElement('div'); f.className = 'memory-frame'; f.innerHTML = `<img loading="lazy" src="${item.img}" alt="Demo: ${item.title}"><span class="frame-label"><small>${item.tag}</small>${item.title}</span>`; memoryTrack.append(f); });
+    const memoryFrames = [...memoryTrack.children];
+    function renderMemory() { memoryFrames.forEach((f, i) => { let d = i - memoryIndex; if (d > 2) d -= memoryItems.length; if (d < -2) d += memoryItems.length; f.dataset.distance = String(d); f.setAttribute('aria-hidden', d === 0 ? 'false' : 'true'); }); document.getElementById('memory-count').textContent = String(memoryIndex + 1).padStart(2, '0') + ' / ' + String(memoryItems.length).padStart(2, '0'); }
+    function moveMemory(d) { memoryIndex = (memoryIndex + d + memoryItems.length) % memoryItems.length; renderMemory(); } renderMemory();
+    document.getElementById('memory-prev').onclick = () => moveMemory(-1); document.getElementById('memory-next').onclick = () => moveMemory(1);
+    const memoryViewport = document.getElementById('memory-viewport'); let wheelAt = 0, touchStart = 0;
+    memoryViewport.addEventListener('wheel', e => { if (Math.abs(e.deltaY) < 5 || Date.now() - wheelAt < 750) return; wheelAt = Date.now(); moveMemory(e.deltaY > 0 ? 1 : -1); }, { passive: true });
+    memoryViewport.addEventListener('touchstart', e => { touchStart = e.touches[0].clientX; }, { passive: true });
+    memoryViewport.addEventListener('touchend', e => { const d = e.changedTouches[0].clientX - touchStart; if (Math.abs(d) > 35) moveMemory(d < 0 ? 1 : -1); }, { passive: true });
+    memoryViewport.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); moveMemory(e.key === 'ArrowRight' ? 1 : -1); } });
+    // V4 Royal Album: interactive page spreads with a short flip animation.
+    const albumSpreads = [
+      [{ title: 'A Royal Beginning', img: memoryItems[0].img }, { title: 'The Celebration', img: memoryItems[1].img }],
+      [{ title: 'Forever Begins', img: memoryItems[2].img }, { title: 'Every Detail', img: memoryItems[3].img }],
+      [{ title: 'Our Story', img: memoryItems[4].img }, { title: 'Timeless Memories', img: memoryItems[0].img }]
+    ];
+    let albumIndex = 0, albumBusy = false; const albumBook = document.getElementById('album-book');
+    function renderAlbum() { const spread = albumSpreads[albumIndex]; document.getElementById('album-left').src = spread[0].img; document.getElementById('album-right').src = spread[1].img; document.getElementById('album-left-caption').textContent = spread[0].title; document.getElementById('album-right-caption').textContent = spread[1].title; document.getElementById('album-count').textContent = String(albumIndex + 1).padStart(2, '0') + ' / ' + String(albumSpreads.length).padStart(2, '0'); }
+    function flipAlbum(d) { if (albumBusy) return; const next = albumIndex + d; if (next < 0 || next >= albumSpreads.length) return; if (matchMedia('(prefers-reduced-motion: reduce)').matches) { albumIndex = next; renderAlbum(); return; } albumBusy = true; albumBook.classList.remove('flipping'); void albumBook.offsetWidth; albumBook.classList.add('flipping'); setTimeout(() => { albumIndex = next; renderAlbum(); }, 340); setTimeout(() => { albumBook.classList.remove('flipping'); albumBusy = false; }, 720); }
+    document.getElementById('album-prev').onclick = () => flipAlbum(-1); document.getElementById('album-next').onclick = () => flipAlbum(1); renderAlbum();
+  </script>
+</body>
+
+</html>
